@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Изменяю директорию на /opt
+cd /opt
+
+# Копирую репозиторий из git
+sudo git clone git clone https://github.com/rbudarin/shvirtd-example-python.git || exit 1
+
+# Переход в директорию проекта
+cd shvirtd-example-python || exit 1
+
+# Запускаем Docker Compose
+docker compose up -d
